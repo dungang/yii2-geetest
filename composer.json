@@ -1,0 +1,25 @@
+{
+  "name": "dungang/geetest",
+  "description": "geetest 验证码库",
+  "type": "library",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "dun gang",
+      "email": "dungang@126.com",
+      "homepage": "https://github.com/dungang",
+      "role": "Creator"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "gee-team/gt-php-sdk":"v3.2.0"
+  },
+  
+  "autoload": {
+    "psr-4": {
+      "dungang\\geetest\\": ""
+    }
+  }
+}
