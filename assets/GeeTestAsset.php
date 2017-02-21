@@ -13,7 +13,7 @@ use yii\web\AssetBundle;
 
 class GeeTestAsset extends AssetBundle
 {
-    public $baseUrl="http://static.geetest.com/static/tools/";
+    public $baseUrl="//static.geetest.com/static/tools/";
     public $js=['gt.js'];
     public $depends = [
         'yii\web\YiiAsset'

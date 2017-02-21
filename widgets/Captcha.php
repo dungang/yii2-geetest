@@ -17,14 +17,14 @@ use yii\helpers\Url;
 class Captcha extends InputWidget
 {
 
-    public $value = 'pc';
+    public $platform = 'pc';
 
     public $captchaId = 'geetest';
 
     public function run()
     {
         $this->clientOptions['url'] = Url::toRoute(['/geetest']);
-        $this->clientOptions['type'] = $this->value;
+        $this->clientOptions['type'] = $this->platform;
 
         /**
          * 还需要增加一个隐藏hidden input
@@ -34,8 +34,8 @@ class Captcha extends InputWidget
         $input = $this->renderSingleInput();
         return Html::tag('div',$input .
             '<div class="gt-container"></div>
-            <p class="gt-wait show">正在加载验证码......</p>
-            <p class="gt-notice hide">请先拖动验证码到相应位置</p>',$this->options);
+            <p class="gt-wait" style="text-align:center;padding:2px;">正在加载验证码......</p>
+            <p class="gt-notice" style="text-align:center;padding:2px;">请先拖动验证码到相应位置</p>',$this->options);
     }
 
     protected function renderSingleInput()

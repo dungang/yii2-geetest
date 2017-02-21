@@ -23,16 +23,16 @@
                     initGeetest({
                         gt: data.gt,
                         challenge: data.challenge,
-                        product: "embed", // 产品形式，包括：float，embed，popup。注意只对PC版验证码有效
+                        product: opts.showType, // 产品形式，包括：float，embed，popup。注意只对PC版验证码有效
                         offline: !data.success // 表示用户后台检测极验服务器是否宕机，一般不需要关注
                         // 更多配置参数请参见：http://www.geetest.com/install/sections/idx-client-sdk.html#config
                     }, function (captchaObj) {
                         $(opts.submitButton).click(function (e) {
                             var validate = captchaObj.getValidate();
                             if (!validate) {
-                                _this.find(".gt-notice").addClass('show');
+                                _this.find(".gt-notice").show();
                                 setTimeout(function () {
-                                    _this.find(".gt-notice").addClass('hide');
+                                    _this.find(".gt-notice").hide();
                                 }, 2000);
                                 e.preventDefault();
                             }
@@ -40,7 +40,7 @@
                         // 将验证码加到id为captcha的元素里，同时会有三个input的值：geetest_challenge, geetest_validate, geetest_seccode
                         captchaObj.appendTo(_this.find('.gt-container'));
                         captchaObj.onReady(function () {
-                            _this.find(".gt-wait").addClass("hide");
+                            _this.find(".gt-wait").hide();
                         });
                         // 更多接口参考：http://www.geetest.com/install/sections/idx-client-sdk.html
                     });
@@ -51,6 +51,7 @@
     $.fn.geetest.Default = {
         submitButton:'#submit',
         type:'pc',
+        showType: 'popup', //float，embed，popup
         url:''
     };
 }(jQuery);
