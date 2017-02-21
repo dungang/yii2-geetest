@@ -1,7 +1,6 @@
 {
   "name": "dungang/geetest",
   "description": "geetest 验证码库",
-  "type": "library",
   "license": "MIT",
   "minimum-stability": "dev",
   "authors": [
