@@ -1,6 +1,6 @@
 {
   "name": "dungang/geetest",
-  "description": "geetest 验证码库",
+  "description": "geetest for YII2  极验证码",
   "license": "MIT",
   "minimum-stability": "dev",
   "authors": [
