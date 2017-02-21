@@ -52,7 +52,7 @@ params.php 添加如下代码
     {
         return [
             // userName and password are both required
-            [['userName', 'password','verifyCode'], 'required'],
+            [['userName', 'password'], 'required'],
             // verifyCode needs to be entered correctly
             ['verifyCode',\dungang\geetest\validators\CaptchaValidator::className()],
             // rememberMe must be a boolean value
