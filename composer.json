@@ -1,5 +1,5 @@
 {
-  "name": "dungang/geetest",
+  "name": "dungang/yii2-geetest",
   "description": "geetest for YII2  极验证码",
   "license": "MIT",
   "minimum-stability": "dev",

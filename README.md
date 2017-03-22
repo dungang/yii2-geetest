@@ -1,4 +1,4 @@
-# geetest
+# yii2-geetest
 
 yii2-geetest 是基于YII2框架对极验证码的封装。要使用此验证码需要申请appkey，具体请查阅极验证码的官网文档。
 
@@ -13,7 +13,7 @@ http://www.geetest.com/install/sections/idx-server-sdk.html#php
 
 ```
 
-composer require dungang/geetest
+composer require dungang/yii2-geetest
 
 ```
 
