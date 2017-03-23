@@ -13,9 +13,13 @@ use yii\web\AssetBundle;
 
 class CaptchaAsset extends AssetBundle
 {
-    public $sourcePath="@vendor/dungang/geetest/assets/geetest/";
     public $js=['geetest.js'];
     public $depends = [
         'dungang\geetest\assets\GeeTestAsset'
     ];
+
+    public function init()
+    {
+        $this->sourcePath = __DIR__ . '/geetest/';
+    }
 }
