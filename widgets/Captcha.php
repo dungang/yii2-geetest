@@ -33,9 +33,7 @@ class Captcha extends InputWidget
         $this->registerPlugin('geetest');
         $input = $this->renderSingleInput();
         return Html::tag('div',$input .
-            '<div class="gt-container"></div>
-            <p class="gt-wait" style="text-align:center;padding:2px;">正在加载验证码......</p>
-            <p class="gt-notice" style="text-align:center;padding:2px;">请先拖动验证码到相应位置</p>',$this->options);
+            '<div class="gt-container" style="padding: 5px 15px;"></div>',$this->options);
     }
 
     protected function renderSingleInput()

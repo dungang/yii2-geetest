@@ -35,6 +35,9 @@
                                     _this.find(".gt-notice").hide();
                                 }, 2000);
                                 e.preventDefault();
+                                $(opts.inputId).val('');
+                            } else {
+                                $(opts.inputId).val('success');
                             }
                         });
                         // 将验证码加到id为captcha的元素里，同时会有三个input的值：geetest_challenge, geetest_validate, geetest_seccode
@@ -52,6 +55,7 @@
         submitButton:'#submit',
         type:'pc',
         showType: 'popup', //float，embed，popup
-        url:''
+        url:'',
+        inputId:'geetest'
     };
 }(jQuery);
