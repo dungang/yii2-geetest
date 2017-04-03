@@ -25,6 +25,7 @@ class Captcha extends InputWidget
     {
         $this->clientOptions['url'] = Url::toRoute(['/geetest']);
         $this->clientOptions['type'] = $this->platform;
+        $this->clientOptions['inputId'] = '#'.$this->captchaId;
 
         /**
          * 还需要增加一个隐藏hidden input

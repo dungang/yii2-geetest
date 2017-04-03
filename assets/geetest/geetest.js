@@ -27,6 +27,9 @@
                         offline: !data.success // 表示用户后台检测极验服务器是否宕机，一般不需要关注
                         // 更多配置参数请参见：http://www.geetest.com/install/sections/idx-client-sdk.html#config
                     }, function (captchaObj) {
+                        captchaObj.onSuccess(function () {
+                            $(opts.inputId).val('success');
+                        });
                         $(opts.submitButton).click(function (e) {
                             var validate = captchaObj.getValidate();
                             if (!validate) {
@@ -35,9 +38,6 @@
                                     _this.find(".gt-notice").hide();
                                 }, 2000);
                                 e.preventDefault();
-                                $(opts.inputId).val('');
-                            } else {
-                                $(opts.inputId).val('success');
                             }
                         });
                         // 将验证码加到id为captcha的元素里，同时会有三个input的值：geetest_challenge, geetest_validate, geetest_seccode
@@ -56,6 +56,6 @@
         type:'pc',
         showType: 'popup', //float，embed，popup
         url:'',
-        inputId:'geetest'
+        inputId:'#geetest'
     };
 }(jQuery);
